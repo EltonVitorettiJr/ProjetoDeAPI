@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cssinicio.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Bem-vindo à Página Inicial</h1>
+    </header>
+    <main>
+        <h2>Cursos Disponíveis</h2>
+        <ul>
+            {% for curso in cursos %}
+                <li>
+                    {{ curso[1] }} - {{ curso[2] }}
+                    <form method="POST" action="/deletar_curso/{{ curso[0] }}" style="display: inline;">
+                        <button type="submit" class="btn-delete">🗑️</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        <form method="POST" action="/cursos">
+            <input type="text" name="nome" placeholder="Nome do Curso" required>
+            <textarea name="descricao" placeholder="Descrição do Curso" required></textarea>
+            <button type="submit">Adicionar Curso</button>
+        </form>
+        <form action="/alunos" method="GET">
+            <button href="/alunos">Listar Alunos</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025</p>
+    </footer>
+</body>
+
+</html>
