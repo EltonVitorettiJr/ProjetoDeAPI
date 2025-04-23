@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url("../img/fundodapagina.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #000000;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    background: linear-gradient(to bottom, #b22222, #800020);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100vw;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+li span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+li form {
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+
+form {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+button {
+    background-color: #b22222;
+    color: white;
+    border: none;
+    padding: 12px 5px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    width: auto;
+    margin: 0 auto;
+    transition: all 0.2s ease;
+    height: 40px;
+    min-width: 120px;
+}
+
+button:hover {
+    background-color: #751717;
+    transform: scale(1.02);
+    opacity: 0.95;
+}
+
+
+.btn-delete {
+    background-color: #b22222;
+    padding: 8px 4px;
+    font-size: 0.8rem;
+    height: 30px;
+    width: 30px;
+}
+
+.btn-delete:hover {
+    background-color: #a11d1d;
+}
+
+
+footer {
+    background: linear-gradient(to bottom, #b22222, #800020);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100vw;
+}
+
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+@media (max-width: 600px) {
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        white-space: normal;
+    }
+
+    li span {
+        width: 100%;
+    }
+
+    .btn-delete {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    button, button[type="submit"], button[href="/"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
